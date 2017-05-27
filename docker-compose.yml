@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  node:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3030"
+
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=robert
+      - MYSQL_PASSWORD=robert
+      - MYSQL_ROOT_PASSWORD=root
