@@ -5,8 +5,8 @@ const mysql = {
   options: {
     host: 'mysql',
     port: 3306,
-    dialect: 'mysql'
-  }
+    dialect: 'mysql',
+  },
 };
 
-export {mysql};
+export default { mysql };

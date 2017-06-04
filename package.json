@@ -6,7 +6,7 @@
   "scripts": {
     "babel-node": "babel-node",
     "start": "nodemon -L --exec npm run babel-node -- app.js",
-    "lint": "eslint ./*.js",
+    "lint": "eslint ./**/*.js ./*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

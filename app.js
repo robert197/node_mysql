@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 
-const Sequelize = require('sequelize');
+import Sequelize from 'sequelize';
 
-const config = require('./config/config');
+import config from './config/config';
 
 const sequelize = new Sequelize(
   config.mysql.name,
