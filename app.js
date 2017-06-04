@@ -2,6 +2,8 @@ import express from 'express';
 
 import Sequelize from 'sequelize';
 
+import winston from 'winston';
+
 import config from './config/config';
 
 const sequelize = new Sequelize(
@@ -16,10 +18,10 @@ const PORT = 3030;
 sequelize
   .authenticate()
   .then(() => {
-    console.log('Connection has been established successfully.');
+    winston.info('Connection has been established successfully.');
   })
   .catch((err) => {
-    console.error('Unable to connect to the database:', err);
+    winston.log('error', 'Unable to connect to the database:', err);
   });
 
 app.get('/', (req, res) => {
@@ -27,4 +29,4 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT);
-console.log('Running on http://localhost:3000');
+winston.info('Running on http://localhost:3000');
