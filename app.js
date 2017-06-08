@@ -15,7 +15,7 @@ class Server {
     this.app.use('/', index);
     this.app.use('/user', user);
     this.app.listen(this.PORT);
-    winston.info('Running on http://localhost:3000');
+    winston.info(`Running on http://localhost:${this.PORT}`);
   }
 }
 new Server();

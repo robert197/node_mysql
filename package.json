@@ -7,13 +7,14 @@
     "babel-node": "babel-node",
     "start": "nodemon -L --exec npm run babel-node -- app.js",
     "lint": "eslint ./**/*.js ./*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jasmine-node --color ./app --autotest --captureExceptions --watch ./app"
   },
-  "author": "",
+  "author": "robert.p1991@gmail.com",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "4.15.3",
+    "express-hateoas-links": "1.0.7",
     "mysql": "^2.13.0",
     "mysql2": "^1.3.2",
     "sequelize": "^3.30.4",
@@ -33,6 +34,8 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "jasmine-node": "1.14.5",
+    "path": "^0.12.7",
+    "request": "2.81.0"
   }
 }

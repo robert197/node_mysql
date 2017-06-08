@@ -7,7 +7,6 @@ const Router = express.Router();
 Router.get('/', (req, res) => {
   models.User.findAll()
     .then((users) => {
-      res.header('Server', 'info');
       res.send(users);
     })
     .catch(err => winston.error(err));
